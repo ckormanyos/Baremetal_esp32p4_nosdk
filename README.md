@@ -43,7 +43,7 @@ The low-level startup process begins on HP Core 0, which initializes the C/C++ r
 
 Since the RISC-V architecture lacks native WFE/SEV instructions for SMP synchronization, Core 0 notifies Core 1 that the runtime environment setup is complete via the machine software interrupt pending flag in the CLINT of Core 1 to emulate a cross-core event trigger.
 
-Once synchronized, both cores execute the main() function, enable global interrupts, and enter an idle loop. Each core then toggles its own LED at a 1 Hz frequency, driven by its respective private timer interrupt.
+Once synchronized, both cores execute the main() function, enable global interrupts, and enter an idle loop. Each core then toggles its own LED at a 2 Hz frequency, driven by its respective private timer interrupt.
 
 ## Co-Processor image
 
