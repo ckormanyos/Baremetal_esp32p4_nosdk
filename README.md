@@ -92,6 +92,14 @@ cd ./Build
 Flash.sh
 ```
 
+## Terminal Output
+
+![Image](.github/image/terminal.png)
+
+## ESP32-P4-PICO Pinout
+
+![Image](.github/image/pinout.png)
+
 ## Tools
 
 The following tools are needed to build, flash and debug this project:
