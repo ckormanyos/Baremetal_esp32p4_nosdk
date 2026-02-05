@@ -1,0 +1,3 @@
+[submodule "Code/OSEK"]
+	path = Code/OSEK
+	url = https://github.com/Chalandi/osek_multicore.git

@@ -1,0 +1,11 @@
+
+void OnProjectLoad (void) {
+
+  Project.SetDevice ("ESP32-P4_LP_CPU");
+  Project.SetHostIF ("USB", "");
+  Project.SetTargetIF ("JTAG");
+  Project.SetTIFSpeed ("4 MHz");
+  Project.AddSvdFile ("$(InstallDir)/Config/CPU/RV32IFD.svd");
+  Project.AddSvdFile ("$(ProjectDir)/../Code/Mcal/esp32p4.svd");
+  File.Open ("$(ProjectDir)/../Code/coprocessor/output/ulp.elf");
+}
