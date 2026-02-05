@@ -6,7 +6,7 @@ on:
   pull_request:
 
 jobs:
-  build-arm-none-eabi:
+  build-riscv32-esp-elf:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
@@ -15,12 +15,10 @@ jobs:
         run: |
           wget -q https://github.com/espressif/crosstool-NG/releases/download/esp-15.2.0_20251204/riscv32-esp-elf-15.2.0_20251204-x86_64-linux-gnu.tar.xz
           tar -xf riscv32-esp-elf-15.2.0_20251204-x86_64-linux-gnu.tar.xz
-          # Rename for easier PATH management
-          mv riscv32-esp-elf-15.2.0_20251204-x86_64-linux-gnu toolchain
 
-      - name: Build Baremetal
+      - name: Build Binary
         run: |
-          export PATH=$GITHUB_WORKSPACE/toolchain/bin:$PATH
+          export PATH=$GITHUB_WORKSPACE/riscv32-esp-elf/bin:$PATH
           cd $GITHUB_WORKSPACE/Build
           chmod +x Rebuild.sh
           ./Rebuild.sh all
