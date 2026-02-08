@@ -127,7 +127,7 @@ GENERATE :
 	@-echo +++ generate: $(OUTPUT_DIR)/$(PRJ_NAME).hex
 	@$(OBJCOPY) $(OUTPUT_DIR)/$(PRJ_NAME).elf -O ihex $(OUTPUT_DIR)/$(PRJ_NAME).hex
 	@-echo +++ generate: $(OUTPUT_DIR)/$(PRJ_NAME).bin
-	@-esptool --chip esp32p4 elf2image --flash-mode dio --flash-freq 80m --flash-size 32MB -o $(OUTPUT_DIR)/$(PRJ_NAME).bin $(OUTPUT_DIR)/$(PRJ_NAME).elf 1>/dev/null
+	@-esptool --chip esp32p4 elf2image -o $(OUTPUT_DIR)/$(PRJ_NAME).bin $(OUTPUT_DIR)/$(PRJ_NAME).elf 1>/dev/null
 	@-echo +++ End
 	@-echo
 
