@@ -41,7 +41,7 @@ REFORMAT_BIN      = $(CURDIR)/../Tools/scripts/ConcatenateDataBlocks.py
 ############################################################################################
 TOOLCHAIN = riscv32-esp-elf
 
-ARCH      = -march=rv32imafc_zicsr_zifencei_xesppie \
+ARCH      = -march=rv32imafc_zicsr_zifencei         \
             -mabi=ilp32f                            \
             -msmall-data-limit=0                    \
             -falign-functions=4                     \
