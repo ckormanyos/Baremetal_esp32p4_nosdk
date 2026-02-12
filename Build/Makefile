@@ -207,7 +207,7 @@ endif
 ############################################################################################
 
 SRC_FILES := $(SRC_DIR)/Appli/main.c            \
-             $(SRC_DIR)/Mcal/gpio.s             \
+             $(SRC_DIR)/Mcal/gpio.c             \
              $(SRC_DIR)/Startup/boot.s          \
              $(SRC_DIR)/Startup/intvect.c       \
              $(SRC_DIR)/Startup/Startup.c       \
